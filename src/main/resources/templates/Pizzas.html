@@ -8,6 +8,11 @@
 
 <body>
 	<h1>Pizzas:</h1>
+	<form>
+		<label for="search">SEARCH</label>
+		<input id="search" type="text" name="q" th:value="${q}">
+		<input type="submit" value="SEARCH" > 		
+	</form>
 	<ul>
 		<li th:each="pizza : ${pizzas}" th:object="${pizza}">
 			<a th:href="@{/pizzas/{id}(id=${pizza.id})}">
