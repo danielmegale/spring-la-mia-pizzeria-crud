@@ -25,7 +25,11 @@ public class PizzaService {
 
 		return pizzaRepository.findByNomeContaining(query);
 	}
-
+	
+	public void delete(Pizza pizza) {
+		pizzaRepository.delete(pizza);
+	}
+	
 	public void save(Pizza pizza) {
 		pizzaRepository.save(pizza);
 	}
